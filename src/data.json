@@ -1,0 +1,52 @@
+[
+	{
+		"id": 1,
+		"question": "What is the main component of the sun?",
+		"answers": [
+			"Liquid lava",
+			"Molten iron",
+			"Rock"
+		],
+		"correct": "Gas"
+	},
+	{
+		"id": 2,
+		"question": "In which country is Transylvania?",
+		"answers": [
+			"Bulgaria",
+			"Croatia",
+			"Serbia"
+		],
+		"correct": "Romania"
+	},
+	{
+		"id": 3,
+		"question": "In the series “Game of Thrones”, Winterfell is the ancestral home of which family?",
+		"answers": [
+			"The Lannisters",
+			"The Tully’s",
+			"The Targaryens"
+		],
+		"correct": "The Starks"
+	},
+	{
+		"id": 4,
+		"question": "What does the term “SOS” commonly stand for?",
+		"answers": [
+			"Save Our Sheep",
+			"Save Our Ship",
+			"Save Our Seal"
+		],
+		"correct": "Save Our Souls"
+	},
+	{
+		"id": 5,
+		"question": "Which company is known for publishing the Mario video game?",
+		"answers": [
+			"Xbox",
+			"SEGA",
+			"Electronic Arts"
+		],
+		"correct": "Nintendo"
+	}
+]

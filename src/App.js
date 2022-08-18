@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState, useRef } from 'react'
+import Card from './components/Card'
+import Result from './components/Result'
+import './scss/App.scss'
+import data from './data.json'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const questionsCount = data.length;
+	const [step, setStep] = useState(0)
+	const [correctCount, setCorrectCount] = useState(0)
+
+	const handleAnswer = (correct, selected) => {
+		if (correct === selected) setCorrectCount(prev => prev + 1)
+		setStep(prev => prev + 1)
+	}
+
+	const startOver = () => {
+		setStep(0)
+		setCorrectCount(0)
+	}
+
+	return (
+		<div className='App'>
+			{step !== questionsCount
+				?
+				<Card
+					{...data[step]}
+					handleAnswer={handleAnswer}
+					total={questionsCount}
+					step={step}
+				/>
+				:
+				<Result
+					correctCount={correctCount}
+					total={questionsCount}
+					startOver={startOver}
+				/>
+			}
+		</div>
+	)
 }
 
-export default App;
+export default App
